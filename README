@@ -44,13 +44,13 @@ To install and run the project locally, follow these steps:
 
    ./configure CXXFLAGS="-fPIC" CFLAGS="-fPIC"      # Checks for the availability of necessary libraries and tools (e.g., compilers).       ## Specifies that all C and C++ files should be compiled with the -fPIC flag.        ### Creates position-independent code needed to build dynamic libraries.
 
-   ![Succesful configure](https://github.com/username/repository/blob/main/images/screenshot1.png)
+   ![Succesful configure](https://github.com/ivan19911502/pet_project/blob/festival/png/making%20speech%20tools.png)
 
 6. Making speech_tools:
 
    ~/speech_tools$ make    # Controls the execution of commands for compilation and assembly using a configuration file, usually called a Makefile.
 
-   ![Succesful make](https://github.com/username/repository/blob/main/images/screenshot1.png)
+   ![Succesful make](https://github.com/ivan19911502/pet_project/blob/festival/png/making%20speech%20tools.png)
 
 7. Go to folder festival:
 
@@ -60,14 +60,14 @@ To install and run the project locally, follow these steps:
 
    ~/festival$ make
 
-   ![Succesful make](https://github.com/username/repository/blob/main/images/screenshot1.png)
+   ![Succesful make](https://github.com/ivan19911502/pet_project/blob/festival/png/making%20festival.png)
 
 9. Copy binary files:
 
    sudo cp -r bin/* /usr/local/bin/
    sudo cp -r lib/* /usr/local/lib/
 
-   ![Finish](https://github.com/username/repository/blob/main/images/screenshot1.png)
+   ![Finish](https://github.com/ivan19911502/pet_project/blob/festival/png/finish.png)
 
 
 
