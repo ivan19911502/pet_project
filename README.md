@@ -58,20 +58,21 @@ To install and run the project locally, follow these steps:
 
 ![Succesful make](https://github.com/ivan19911502/pet_project/blob/festival/png/making%20speech%20tools.png)
 
+
 10. Go to folder festival:
-   ```bash
-   cd festival
+    ```bash
+    cd festival
 
 11. Making festival:
-   ```bash
-   ~/festival$ make
+    ```bash
+    ~/festival$ make
    
    ![Succesful make](https://github.com/ivan19911502/pet_project/blob/festival/png/making%20festival.png)
 
 11. Copy binary files:
-   ```bash
-   sudo cp -r bin/* /usr/local/bin/
-   sudo cp -r lib/* /usr/local/lib/
+    ```bash
+    sudo cp -r bin/* /usr/local/bin/
+    sudo cp -r lib/* /usr/local/lib/
 
    ![Finish](https://github.com/ivan19911502/pet_project/blob/festival/png/finish.png)
 
