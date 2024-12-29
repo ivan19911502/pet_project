@@ -30,40 +30,44 @@ To install and run the project locally, follow these steps:
 2. Clone the repository:
    
    git clone https://github.com/festvox/festival
+   
    git clone https://github.com/festvox/speech_tools
    
-3. Update version gcc:
+4. Update version gcc:
 
-   sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50          # Update version for C with priority 50.
-   sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50          # # Update version for CC with priority 50.
+   sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
+    # Update version for C with priority 50.
+   
+   sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
+   # # Update version for CC with priority 50.
 
-4. Go to folder speech_tools:
+5. Go to folder speech_tools:
 
    cd speech_tools
 
-5. Start configure:
+6. Start configure:
 
    ./configure CXXFLAGS="-fPIC" CFLAGS="-fPIC"      # Checks for the availability of necessary libraries and tools (e.g., compilers).       ## Specifies that all C and C++ files should be compiled with the -fPIC flag.        ### Creates position-independent code needed to build dynamic libraries.
 
    ![Succesful configure](https://github.com/ivan19911502/pet_project/blob/festival/png/making%20speech%20tools.png)
 
-6. Making speech_tools:
+7. Making speech_tools:
 
    ~/speech_tools$ make    # Controls the execution of commands for compilation and assembly using a configuration file, usually called a Makefile.
 
    ![Succesful make](https://github.com/ivan19911502/pet_project/blob/festival/png/making%20speech%20tools.png)
 
-7. Go to folder festival:
+8. Go to folder festival:
 
    cd festival
 
-8. Making festival:
+9. Making festival:
 
    ~/festival$ make
 
    ![Succesful make](https://github.com/ivan19911502/pet_project/blob/festival/png/making%20festival.png)
 
-9. Copy binary files:
+10. Copy binary files:
 
    sudo cp -r bin/* /usr/local/bin/
    sudo cp -r lib/* /usr/local/lib/
