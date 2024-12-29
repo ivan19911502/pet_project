@@ -13,7 +13,8 @@ Requirements:
 > Ubuntu 18.04 or lower
 > G++/GCC 4.8.x or lower
 > make GNU
-> git - ![festival](https://github.com/festvox/festival) , ![speech_tools](https://github.com/festvox/speech_tools)
+> git - ![festival](https://github.com/festvox/festival) 
+        ![speech_tools](https://github.com/festvox/speech_tools)
 
 -------------------------
 
