@@ -34,8 +34,9 @@ To install and run the project locally, follow these steps:
    git clone https://github.com/festvox/speech_tools
    
 4. Update version gcc:
-   ```bash
+   
    # Update version for C with priority 50.
+   ```bash
    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
    
    sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
