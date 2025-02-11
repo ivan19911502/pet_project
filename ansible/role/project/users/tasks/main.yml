@@ -1,0 +1,12 @@
+---
+
+- name: Create users
+  ansibl.builtin.user:
+    name: "{{ item.name }}"
+    shell: "{{ item.shell }}"
+    groups: developers
+    append: yes
+  loop: "{{ users }}"
+
+ 
+    

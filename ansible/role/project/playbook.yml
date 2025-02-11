@@ -1,0 +1,13 @@
+---
+- hosts: webservers
+  become: yes
+  roles:
+    - ssh
+    - common
+    - dependencies
+    - docker
+    - static
+    - web
+
+
+
