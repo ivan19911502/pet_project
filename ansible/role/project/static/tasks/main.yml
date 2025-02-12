@@ -1,7 +1,0 @@
----
-- name: Configure static IP
-  template:
-    src: interfaces.j2
-    dest: /etc/network/interfaces
-  when: static_ip is defined
-  notify: Restart networking
