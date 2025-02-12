@@ -1,0 +1,27 @@
+---
+- name: Ensure group developers exists
+  ansible.builtin.group:
+    name: developers
+    state: present
+
+
+- name: Create users
+  ansible.builtin.user:
+    name: "{{ item.name }}"
+    shell: "{{ item.shell }}"
+    groups: developers
+    create_home: yes
+    generate_ssh_key: yes
+    ssh_key_bits: 2048
+    ssh_key_file: .ssh/id_rsa
+    append: yes
+  loop: "{{ users }}"
+
+- name: Add public key to authorized_key
+  ansible.builtin.authorized_key:
+    user: "{{ item.name }}"
+    key: "{{ pub_key }}"
+  loop: "{{ users }}"
+
+ 
+    

@@ -1,0 +1,31 @@
+services:
+  traefik:
+    image: "traefik:{{ traefik_version }}"
+    container_name: traefik
+    restart: always
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - nginx
+    command: 
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=true"
+      - "--api.dashboard=true"
+      - "--entrypoints.web.address=:80"
+  nginx:
+    image: "nginx:{{ nginx_version }}"
+    container_name: nginx
+    restart: always
+    networks:
+      - nginx
+    labels:
+      - traefik.enable=true
+      - "traefik.http.routers.nginx.rule=Host(`ivan123.com`)"
+      - "traefik.http.services.nginx.loadbalancer.server.port=80"
+networks:
+  nginx:

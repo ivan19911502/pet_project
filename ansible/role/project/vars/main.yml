@@ -1,0 +1,29 @@
+---
+# vars file for project
+
+users:
+  - name: user1
+    shell: /bin/bash
+  - name: user2
+    shell: /bin/bash
+pub_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOmJczSV003lFuIsxuBty0mHU6wkH58nzEDu/GrOtF7a ivan11@ivan11 
+
+interface: enp0s9
+static_ip: "192.168.1.100"
+gateway: "192.168.1.1"
+dns_servers:
+  - "8.8.8.8"
+  - "8.8.4.4"
+routes:
+  - network: "10.0.0.0/24"
+    gateway: "192.168.1.1"
+  - network: "192.168.2.0/24" 
+    gateway: "192.168.1.1"
+docker_compose_version: "v2.24.5"
+traefik_version: "v2.10.4"
+nginx_version: "latest"
+nodejs_versions:
+  - 12
+  - 16
+  - 18
+default_nodejs_version: 18

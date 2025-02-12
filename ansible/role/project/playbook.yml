@@ -1,0 +1,19 @@
+---
+- hosts: webservers
+  become: yes
+  collections:
+    - community.general
+  vars_files:
+    - /home/ivan11/ansible/role/project/vars/main.yml
+  roles:
+    - ssh
+    - common
+    - dependencies
+    - users
+    - docker
+    - static
+    - web
+    - nodejs
+
+
+

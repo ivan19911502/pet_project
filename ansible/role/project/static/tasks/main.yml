@@ -1,0 +1,7 @@
+---
+- name: Configure static IP
+  template:
+    src: netplan.j2
+    dest: /etc/netplan/01-netcfg.yaml
+  when: static_ip is defined
+  notify: Restart networking

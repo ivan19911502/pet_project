@@ -1,0 +1,21 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    {{ interface }}:
+      dhcp4: no
+      addresses:
+        - {{ static_ip }}/24
+      nameservers:
+        addresses:
+{% for dns in dns_servers %}
+          - {{ dns }}
+{% endfor %}
+{% if routes is defined %}
+      routes:
+{% for route in routes %}
+        - to: {{ route.network }}
+          via: {{ route.gateway }}
+{% endfor %}
+{% endif %}
+

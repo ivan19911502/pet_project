@@ -1,0 +1,8 @@
+---
+- name: Install dependencies
+  ansible.builtin.apt:
+    name:
+      - openssh-server
+      - software-properties-common
+    state: present
+    update_cache: yes

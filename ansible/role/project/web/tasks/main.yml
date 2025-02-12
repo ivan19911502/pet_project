@@ -1,0 +1,13 @@
+---
+- name: Create Docker Compose file from template
+  ansible.builtin.template:
+    src: /home/ivan11/ansible/role/project/web/templates/docker-compose.yml.j2
+    dest: /home/ivan22/docker-compose.yml
+    mode: '0644'
+
+- name: Deploy containers using Docker Compose
+  ansible.builtin.command:
+    cmd: docker compose -f docker-compose.yml up -d
+  args:
+    chdir: /home/ivan22
+
